@@ -6,7 +6,7 @@ import { Provider, connect } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers'
-
+import "antd/dist/antd.css";
 
 const store = createStore(reducers,applyMiddleware(thunk));
 
@@ -34,9 +34,4 @@ class App extends Component{
   }
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />,document.getElementById('root'));
